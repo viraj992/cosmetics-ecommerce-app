@@ -8,6 +8,7 @@ import ContactUsPage from "../contactUsPage";
 import ReviewsPage from "../reviewsPage";
 import HomePage from "../homePage";
 import AboutusPage from "../aboutUs";
+import TestPage from "../testPage";
 
 export default function ClientwebPage(){
     return(
@@ -23,6 +24,7 @@ export default function ClientwebPage(){
                     <Route path="/contact-us" element={<ContactUsPage/>}/>
                     <Route path="/cart" element={<CartPage/>}/>
                     <Route path="/checkout" element={<CheckOutpage/>}/>
+                    <Route path="/test" element={<TestPage/>}/>
                     <Route path="/overview/:productId" element={<ProductOverViewPage/>}/>
                     <Route path="/*" element={<h1 className="text-3xl text-center">404 Not Found</h1>}/>
                 </Routes>

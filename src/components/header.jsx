@@ -17,7 +17,7 @@ export default function Header() {
   const token = localStorage.getItem("token");
 
   return (
-    <header className="h-[100px] bg-white flex justify-center items-center fixed top-0 left-0 w-full z-[200] border-4 border-accent">
+    <header className="h-[100px] bg-white flex justify-center items-center fixed top-0 left-0 w-full z-[200] border-b border-muted">
       {/* ================= MOBILE OVERLAY ================= */}
       {isOpen && (
         <div className="fixed z-[100] top-0 right-0 w-[100vw] h-[100vh] bg-[#00000050]">
@@ -69,7 +69,7 @@ export default function Header() {
 
       {/* ================= LOGO ================= */}
       <img
-        className="w-[170px] h-[80px] object-cover absolute left-[100px] md:left-[35px] cursor-pointer"
+        className="w-[170px] h-[80px] object-cover absolute left-3/7 md:left-[35px] cursor-pointer"
         src="/logo.png"
         alt="Logo"
         onClick={() => navigate("/")}
@@ -77,37 +77,38 @@ export default function Header() {
 
       {/* ================= HAMBURGER ================= */}
       <GiHamburgerMenu
-        className="text-white absolute md:hidden left-[40px] text-4xl cursor-pointer"
+        className="text-black absolute md:hidden left-[40px] text-4xl cursor-pointer"
         onClick={() => setIsOpen(true)}
       />
 
       {/* ================= DESKTOP NAV ================= */}
       <div className="hidden md:flex items-center w-full max-w-[1400px] px-4">
-        <nav className="flex items-center gap-3 lg:gap-6 ml-[280px] lg:ml-[320px]">
-          {[
-            { to: "/", label: "Home", end: true },
-            { to: "/products", label: "Products" },
-            { to: "/reviews", label: "Reviews" },
-            { to: "/about-us", label: "About Us" },
-            { to: "/contact-us", label: "Contact Us" },
-          ].map(({ to, label, end }) => (
-            <NavLink
-              key={to}
-              to={to}
-              end={end}
-              className={({ isActive }) =>
-                `text-sm lg:text-lg whitespace-nowrap transition-all font-semibold
-                ${
-                  isActive
-                    ? "bg-gray-200 text-accent px-3 lg:px-4 py-2 rounded-full font-semibold"
-                    : "text-accent hover:bg-gray-200 hover:text-accent hover:px-3 lg:hover:px-4 hover:py-2 hover:rounded-full"
-                }`
-              }
-            >
-              {label}
-            </NavLink>
-          ))}
-        </nav>
+        <nav className="flex items-center gap-6 ml-[280px] lg:ml-[320px]">
+        {[
+          { to: "/", label: "Home", end: true },
+          { to: "/products", label: "Products" },
+          { to: "/reviews", label: "Reviews" },
+          { to: "/about-us", label: "About Us" },
+          { to: "/contact-us", label: "Contact Us" },
+        ].map(({ to, label, end }) => (
+          <NavLink
+            key={to}
+            to={to}
+            end={end}
+            className={({ isActive }) =>
+              `relative text-sm lg:text-lg font-medium pb-1 transition-all
+              ${
+                isActive
+                  ? "text-accent after:absolute after:left-0 after:-bottom-[6px] after:w-full after:h-[3px] after:bg-accent"
+                  : "text-black hover:text-accent"
+              }`
+            }
+          >
+            {label}
+          </NavLink>
+        ))}
+      </nav>
+
 
         {/* ================= RIGHT SIDE ================= */}
         <div className="flex items-center gap-2 lg:gap-4 ml-auto">

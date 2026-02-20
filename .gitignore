@@ -25,3 +25,4 @@ dist-ssr
 
 # Ignore your test page
 testedPrevPage.jsx
+testPage.jsx
