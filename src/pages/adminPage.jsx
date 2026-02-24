@@ -108,7 +108,7 @@ export default function AdminPage() {
           <FaStar /> Reviews
         </NavLink>
 
-        <NavLink
+        {/* <NavLink
           to="/admin/settings"
           className={({ isActive }) =>
             `flex flex-row h-[60px] w-full p-[20px] pl-[60px] items-center text-xl gap-[25px] ${
@@ -117,7 +117,7 @@ export default function AdminPage() {
           }
         >
           <IoSettings /> Settings
-        </NavLink>
+        </NavLink> */}
 
         <NavLink
           to="/"
