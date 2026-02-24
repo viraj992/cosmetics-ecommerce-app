@@ -1,6 +1,7 @@
-export default function FeaturedBrands() {
-  const brands = ["/b1.png", "/b2.png", "/b3.png", "/b4.png"];
 
+export default function FeaturedBrands() {
+  const brands = ["/Avene.png", "/cantu.png", "/Cetaphil.png", "/Ego-QV.png", "/CeraVe-Baby.png", "/NIVEA.png", "old-spice.png", "/Aptamil-logo.png"];
+  
   return (
     <div className="w-full py-16 bg-gray-50">
       <h2 className="text-2xl font-bold text-center mb-10">
@@ -12,7 +13,7 @@ export default function FeaturedBrands() {
           <img
             key={i}
             src={img}
-            className="h-[60px] grayscale hover:grayscale-0 transition"
+            className="h-[60px] transition"
           />
         ))}
       </div>

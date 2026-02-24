@@ -9,6 +9,7 @@ import ReviewsPage from "../reviewsPage";
 import HomePage from "../homePage";
 import AboutusPage from "../aboutUs";
 import TestPage from "../testPage";
+import Footer from "../../components/Home/Footer";
 
 export default function ClientwebPage(){
     return(
@@ -29,6 +30,7 @@ export default function ClientwebPage(){
                     <Route path="/*" element={<h1 className="text-3xl text-center">404 Not Found</h1>}/>
                 </Routes>
             </div>
+            <Footer/>
         </div>
     )
 }

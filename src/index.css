@@ -1,19 +1,5 @@
 @import "tailwindcss";
 
-/*@theme {
-  --color-primary: #FFF9F9;   
-  --color-secondary: #382c2e; 
-  --color-accent: #d49263;     buttons/hover/highlights #E91E63-pink #d49263  #7c5d63 #382c2e   
-}
-*/
-
-/*
-@theme {
-  --color-primary: #FFF9F9;   
-  --color-secondary: #382c2e; 
-  --color-accent: #9c229c;    /* buttons/hover/highlights #E91E63-pink #d49263  #7c5d63 #382c2e   
-}
-*/
 
 @theme {
   --color-primary: #FFF6F8;     /* Page + header background */
