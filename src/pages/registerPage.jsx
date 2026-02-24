@@ -43,68 +43,75 @@ export default function RegisterPage() {
 
   return (
     <div className="w-full h-screen bg-[url(./loginbg.jpg)] bg-cover bg-center flex justify-center items-center">
-      <div className="w-[440px] min-h-[550px] bg-white backdrop-blur-lg shadow-2xl rounded-[25px] p-8 flex flex-col items-center">
+      <div className="w-[950px] min-h-[550px] bg-white flex rounded-[25px]">
+        {/* Login Content - left side */}
+        <div className="w-[440px] min-h-[550px] bg-white backdrop-blur-lg shadow-2xl rounded-[25px] p-8 flex flex-col items-center">
 
-        <img 
-          className="w-[140px] h-[50px] mb-3 object-cover cursor-pointer"
-          src="/logo.png" 
-          alt="Logo"
-        />
+          <img 
+            className="w-[140px] h-[50px] mb-3 object-cover cursor-pointer"
+            src="/logo.png" 
+            alt="Logo"
+          />
 
-        <h1 className="text-3xl font-bold mb-3 mt-6 text-black">Create Account</h1>
-        <p className="text-black mb-12">
-          Already have an account?{" "}
-          <Link className="text-blue-600 font-bold cursor-pointer" to="/login">
-            Login
-          </Link>
-        </p>
+          <h1 className="text-3xl font-bold mb-3 mt-6 text-black">Create Account</h1>
+          <p className="text-black mb-12">
+            Already have an account?{" "}
+            <Link className="text-accent font-bold cursor-pointer" to="/login">
+              Login
+            </Link>
+          </p>
 
-        {/* Name */}
-        <div className="w-full mb-5">
-          <div className="flex items-center border-4 border-gray-400 focus-within:border-[#A06C74] rounded-xl px-3 h-[45px] bg-white">
-            <FiUser className="text-xl text-gray-600 mr-2" />
-            <input
-              type="text"
-              placeholder="Your Name"
-              onChange={(e) => setName(e.target.value)}
-              className="w-full outline-none"
-            />
+          {/* Name */}
+          <div className="w-full mb-5">
+            <div className="flex items-center border-4 border-gray-400 focus-within:border-accent rounded-xl px-3 h-[45px] bg-white">
+              <FiUser className="text-xl text-gray-600 mr-2" />
+              <input
+                type="text"
+                placeholder="Your Name"
+                onChange={(e) => setName(e.target.value)}
+                className="w-full outline-none"
+              />
+            </div>
           </div>
-        </div>
 
-        {/* Email */}
-        <div className="w-full mb-5">
-          <div className="flex items-center border-4 border-gray-400 focus-within:border-[#A06C74] rounded-xl px-3 h-[45px] bg-white">
-            <MdEmail className="text-xl text-gray-600 mr-2" />
-            <input
-              type="text"
-              placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full outline-none"
-            />
+          {/* Email */}
+          <div className="w-full mb-5">
+            <div className="flex items-center border-4 border-gray-400 focus-within:border-accent rounded-xl px-3 h-[45px] bg-white">
+              <MdEmail className="text-xl text-gray-600 mr-2" />
+              <input
+                type="text"
+                placeholder="Email"
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full outline-none"
+              />
+            </div>
           </div>
-        </div>
 
-        {/* Password */}
-        <div className="w-full mb-5">
-          <div className="flex items-center border-4 border-gray-400 focus-within:border-[#A06C74] rounded-xl px-3 h-[45px] bg-white">
-            <RiLockPasswordLine className="text-xl text-gray-600 mr-2" />
-            <input
-              type="password"
-              placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full outline-none"
-            />
+          {/* Password */}
+          <div className="w-full mb-5">
+            <div className="flex items-center border-4 border-gray-400 focus-within:border-accent rounded-xl px-3 h-[45px] bg-white">
+              <RiLockPasswordLine className="text-xl text-gray-600 mr-2" />
+              <input
+                type="password"
+                placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full outline-none"
+              />
+            </div>
           </div>
+
+          <button
+            onClick={registerUser}
+            className="w-full h-[45px] bg-accent rounded-xl text-white text-md font-medium mt-2 hover:bg-white border-2 hover:text-accent border-accent  transition-all duration-300 cursor-pointer"
+          >
+            Register
+          </button>
+
         </div>
-
-        <button
-          onClick={registerUser}
-          className="w-full h-[45px] bg-secondary rounded-xl text-white text-md font-medium mt-2 hover:bg-[#614b4e] transition-all duration-300"
-        >
-          Register
-        </button>
-
+        
+        {/* Right Side Image */}
+        <div className="w-[510px] min-h-[550px] bg-[url(./registerAccount.png)] bg-cover bg-center rounded-tr-[25px] rounded-br-[25px] "></div>
+      
       </div>
     </div>
   );

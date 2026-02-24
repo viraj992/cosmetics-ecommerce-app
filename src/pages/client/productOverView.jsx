@@ -41,10 +41,10 @@ export default function ProductOverViewPage(){
                     </div>
 
 
-                    <div className="w-full md:w-[49%] h-full flex flex-col items-center pt-[50px]">
+                    <div className="w-full md:w-[48%] h-full flex flex-col items-start pt-[20px]">
                         <h1 className="text-2xl font-bold hidden md:block">{product.name} <span className="font-light">{product.altNames.join(" | ")}</span></h1>
-                        <p className="text-lg p-2 text-center">{product.description}</p>
-                        <div className="w-full flex flex-col items-center mt-[20px]">
+                        <p className="text-lg pt-2 text-justify ">{product.description}</p>
+                        <div className="w-full flex flex-col items-center md:items-start mt-[20px]">
                             {
                                 product.labelledPrice > product.price?
                                 <div>
@@ -59,7 +59,7 @@ export default function ProductOverViewPage(){
                                 </div>
                             }
                         </div>
-                        <div className="w-full flex flex-row justify-center items-center mt-[20px]  gap-[10px]">
+                        <div className="w-full flex flex-row justify-center md:justify-start items-center mt-[20px]  gap-[10px]">
                             <button
                             onClick={
                                 ()=>{

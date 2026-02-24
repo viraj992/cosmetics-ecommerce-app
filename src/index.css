@@ -1,10 +1,13 @@
 @import "tailwindcss";
 
+
 @theme {
-  --color-primary: #FFF9F9;   /* background -  not white */  
-  --color-secondary: #382c2e; /* text/nav/footer */
-  --color-accent: #7c5d63;    /* buttons/hover/highlights #E91E63-pink #d49263  #7c5d63 #382c2e */  
+  --color-primary: #FFF6F8;     /* Page + header background */
+  --color-secondary: #2F2F2F;  /* Text */
+  --color-accent: #C2185B;     /* Brand / buttons / active */
+  --color-muted: #E6E6E6;      /* Borders / hover bg */
 }
+
 
 body {
   font-family: "Inter", sans-serif;
