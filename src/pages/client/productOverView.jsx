@@ -74,8 +74,8 @@ export default function ProductOverViewPage(){
                                      } });
                                 }
                             }
-                             className="w-[200px] h-[50px] cursor-pointer rounded-xl shadow-2xl text-white bg-blue-900 border-[3px] border-blue-900 hover:bg-white hover:text-blue-900">Buy Now</button>
-                            <button className="w-[200px] h-[50px] cursor-pointer rounded-xl shadow-2xl text-white bg-blue-600 border-[3px] border-blue-600 hover:bg-white hover:text-blue-600" onClick={
+                             className="w-[200px] h-[50px] cursor-pointer rounded-xl shadow-2xl text-white bg-[#1e2175] border-[3px] border-[#1e2175] hover:bg-white hover:text-[#1e2175]">Buy Now</button>
+                            <button className="w-[200px] h-[50px] cursor-pointer rounded-xl shadow-2xl text-white bg-[#A06C74] border-[3px] border-[#A06C74] hover:bg-white hover:text-[#A06C74]" onClick={
                                 ()=>{
                                     addToCart(product,1)
                                     toast.success("Product added to cart")
