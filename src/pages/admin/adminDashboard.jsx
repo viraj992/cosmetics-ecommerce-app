@@ -94,12 +94,7 @@ export default function AdminDashboard() {
           color="bg-orange-500"
         />
 
-        <StatCard
-          title="Total Users not now??"
-          value={<h1>Not Calculated</h1>}
-          icon={<MdPerson3 />}
-          color="bg-yellow-500"
-        />
+        
       </div>
     </div>
   );
