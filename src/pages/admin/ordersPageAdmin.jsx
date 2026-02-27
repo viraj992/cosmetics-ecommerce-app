@@ -38,7 +38,7 @@ export default function OrdersPageAdmin(){
         
     return(
         <div className="w-full h-full flex flex-col justify-between items-start"> 
-            <table className="w-full border-[4px] border-accent mt-[20px]">
+            <table className="w-full border-[4px] border-accent mt-[0px]">
                 <thead>
                     <tr>
                         <th className="p-[10px]">Order ID</th>

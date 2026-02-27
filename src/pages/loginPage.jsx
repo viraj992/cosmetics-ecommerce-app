@@ -49,7 +49,7 @@ export default function LoginPage(){
                 toast.success("Login Successful")
 
                 if(response.data.role == "admin"){
-                      navigate("/admin")  
+                      navigate("/admin/dashboard")  
 
                 }else if (response.data.role == "user"){
                       navigate("/")
@@ -67,6 +67,8 @@ export default function LoginPage(){
 
     return (
   <div className="w-full h-screen bg-[url(./loginbg.jpg)] bg-cover bg-center flex justify-center items-center">
+    <div className="w-[950px] min-h-[550px] bg-white flex items-center justify-end rounded-[25px]">
+      <div className="w-[510px] min-h-[550px] bg-[url(./LoginAvatar.png)] bg-cover bg-center rounded-tl-[25px] rounded-bl-[25px] "></div>
     <div className="w-[440px] min-h-[550px] bg-white backdrop-blur-lg shadow-2xl rounded-[25px] p-8 relative flex flex-col items-center">
     
       
@@ -77,7 +79,7 @@ export default function LoginPage(){
       {/* Sign up link */}
       <p className="text-black mb-12">
         Don’t have an account yet?{" "}
-        <Link className="text-secondary font-bold" to="/register">
+        <Link className="text-accent font-bold " to="/register">
           Signup
         </Link>
       </p>
@@ -85,7 +87,7 @@ export default function LoginPage(){
       {/* Email Input */}
       <div className="w-full mb-4">
         {/*<label className="text-black">Email Address</label> */}
-        <div className="flex items-center border-4 border-gray-400 focus-within:border-[#A06C74] rounded-xl px-3 h-[45px] bg-white ">
+        <div className="flex items-center border-4 border-gray-400 focus-within:border-accent rounded-xl px-3 h-[45px] bg-white ">
           <MdEmail className="text-xl text-gray-600 mr-2" />
           <input
             type="text"
@@ -99,7 +101,7 @@ export default function LoginPage(){
       {/* Password Input */}
       <div className="w-full mb-4">
          {/*<label className="text-black">Password</label> */}
-        <div className="flex items-center border-4 border-gray-400 focus-within:border-[#A06C74] rounded-xl px-3 h-[45px] bg-white">
+        <div className="flex items-center border-4 border-gray-400 focus-within:border-accent rounded-xl px-3 h-[45px] bg-white">
           <RiLockPasswordLine className="text-xl text-gray-600 mr-2" />
           <input
             type="password"
@@ -113,7 +115,7 @@ export default function LoginPage(){
       {/* Login Button */}
       <button
         onClick={login}
-        className="w-full h-[40px] bg-secondary rounded-xl text-white text-md font-medium mt-2 transition-all duration-200 cursor-pointer"
+        className="w-full h-[40px] bg-accent rounded-xl text-md font-medium text-white hover:bg-white hover:text-accent border-2 hover:border-accent  mt-2 transition-all duration-200 cursor-pointer"
       >
         Login
       </button>
@@ -142,6 +144,7 @@ export default function LoginPage(){
         </Link>
       </p>
 
+    </div>
     </div>
   </div>
 );

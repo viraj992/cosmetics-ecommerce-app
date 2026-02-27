@@ -1,5 +1,5 @@
 import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
-import { FaBoxArchive } from "react-icons/fa6";
+import { FaBoxArchive, FaEye } from "react-icons/fa6";
 import { GiShoppingBag } from "react-icons/gi";
 import { IoPeople, IoSettings } from "react-icons/io5";
 import ProductsAdminPage from "./admin/productsAdminPage";
@@ -11,6 +11,10 @@ import Loader from "../components/loader";
 import toast from "react-hot-toast";
 import axios from "axios";
 import ReviewsAdminPage from "./admin/reviewsAdminPage";
+import { FaStar } from "react-icons/fa";
+import UsersManagePage from "./admin/usersManagePage";
+import AdminDashboard from "./admin/adminDashboard";
+import { MdDashboard } from "react-icons/md";
 
 export default function AdminPage() {
   const navigate = useNavigate();
@@ -47,7 +51,18 @@ export default function AdminPage() {
       {adminValidated?<>
       {/* Sidebar */}
       <div className="w-[300px] h-full flex flex-col items-center">
-        <span className="text-3xl font-bold my-5">Admin Panel</span>
+        <span className="text-2xl font-bold my-5">Admin Panel</span>
+
+        <NavLink
+          to="/admin/dashboard"
+          className={({ isActive }) =>
+            `flex flex-row h-[60px] w-full p-[20px] pl-[60px] items-center text-xl gap-[25px] ${
+              isActive ? "bg-accent text-white" : ""
+            }`
+          }
+        >
+          <MdDashboard /> Dashboard
+        </NavLink>
 
         <NavLink
           to="/admin/products"
@@ -90,10 +105,10 @@ export default function AdminPage() {
             }`
           }
         >
-          <IoSettings /> Reviews
+          <FaStar /> Reviews
         </NavLink>
 
-        <NavLink
+        {/* <NavLink
           to="/admin/settings"
           className={({ isActive }) =>
             `flex flex-row h-[60px] w-full p-[20px] pl-[60px] items-center text-xl gap-[25px] ${
@@ -102,18 +117,31 @@ export default function AdminPage() {
           }
         >
           <IoSettings /> Settings
+        </NavLink> */}
+
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `flex flex-row h-[60px] w-full p-[20px] pl-[60px] items-center text-xl gap-[25px] ${
+              isActive ? "bg-accent text-white" : ""
+            }`
+          }
+        >
+          <FaEye /> User View
         </NavLink>
       </div>
 
       {/* Content */}
-      <div className="w-[calc(100%-300px)] h-full">
+      <div className="w-[calc(100%-300px)] h-full mt-[20px]">
         <Routes>
-          <Route path="/" element={<h1>Dashboard</h1>} />
+          <Route path="/dashboard" element={<AdminDashboard/>} />
+
           <Route path="/products" element={<ProductsAdminPage />} />
           <Route path="/newProduct" element={<AddProductPage />} />
           <Route path="/orders" element={<OrdersPageAdmin />} />
           <Route path="/updateProduct" element={<UpdateProductPage />} />
           <Route path="/adminReviews" element={<ReviewsAdminPage/>}/>
+          <Route path="/users" element={<UsersManagePage/>}/>
         </Routes>
       </div>
     </> : <Loader/>}

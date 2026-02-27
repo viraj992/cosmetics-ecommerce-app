@@ -14,7 +14,7 @@ export default function ImageSlider(props){
                         (image, index)=>{
                             return(
                                 <img src= {image} key={index} className={"w-[90px] h-[90px] obect-cover cursor-pointer "+(activeImageIndex == index && "border-[5px]")}
-                                onClick={
+                                onMouseEnter={
                                     ()=>{
                                         setActiveImageIndex(index);
                                     }
