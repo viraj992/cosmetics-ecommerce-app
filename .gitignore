@@ -26,3 +26,6 @@ dist-ssr
 # Ignore your test page
 testedPrevPage.jsx
 testPage.jsx
+.env
+.env.local
+.env.*.local

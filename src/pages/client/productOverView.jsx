@@ -36,7 +36,7 @@ export default function ProductOverViewPage(){
             {
                 status == "success" && <div className="w-full h-full flex flex-col md:flex-row mt-[30px]">
                     <h1 className="text-2xl font-bold my-4 text-center md:hidden">{product.name} <span className="font-light">{product.altNames.join(" | ")}</span></h1>
-                    <div className="w-full md:w-[49%] h-full flex flex-col justify-center items-center">
+                    <div className="w-full md:w-[49%] h-full flex flex-col justify-center items-center mb-20">
                         <ImageSlider images={product.images} />
                     </div>
 
