@@ -110,7 +110,7 @@ export default function RegisterPage() {
         </div>
         
         {/* Right Side Image */}
-        <div className="w-[510px] min-h-[550px] bg-[url(./registerAccount.png)] bg-cover bg-center rounded-tr-[25px] rounded-br-[25px] "></div>
+        <div className="w-[510px] min-h-[550px] bg-[url('/registerAccount.png')] bg-cover bg-center rounded-tr-[25px] rounded-br-[25px] "></div>
       
       </div>
     </div>
