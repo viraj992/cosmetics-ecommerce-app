@@ -2,7 +2,7 @@ import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 export default function ContactUsPage() {
   return (
-    <div className="w-full min-h-screen flex flex-col md:flex-row p-5 md:p-10 gap-8 justify-center items-start bg-[url(./contact.jpg)] bg-cover bg-center relative">
+    <div className="w-full min-h-screen flex flex-col md:flex-row p-5 md:p-10 gap-8 justify-center items-start bg-[url('/contact.jpg')] bg-cover bg-center relative">
       
       {/* Overlay for readability */}
       <div className="absolute inset-0 bg-black/40 z-0"></div>

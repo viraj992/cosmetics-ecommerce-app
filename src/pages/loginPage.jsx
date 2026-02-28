@@ -68,7 +68,7 @@ export default function LoginPage(){
     return (
   <div className="w-full h-screen bg-[url(./loginbg.jpg)] bg-cover bg-center flex justify-center items-center">
     <div className="w-[950px] min-h-[550px] bg-white flex items-center justify-end rounded-[25px]">
-      <div className="w-[510px] min-h-[550px] bg-[url(./LoginAvatar.png)] bg-cover bg-center rounded-tl-[25px] rounded-bl-[25px] "></div>
+      <div className="w-[510px] min-h-[550px] bg-[url('/LoginAvatar.png')] bg-cover bg-center rounded-tl-[25px] rounded-bl-[25px] "></div>
     <div className="w-[440px] min-h-[550px] bg-white backdrop-blur-lg shadow-2xl rounded-[25px] p-8 relative flex flex-col items-center">
     
       
