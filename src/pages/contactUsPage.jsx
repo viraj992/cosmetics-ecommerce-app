@@ -7,59 +7,67 @@ export default function ContactUsPage() {
       {/* Overlay for readability */}
       <div className="absolute inset-0 bg-black/40 z-0"></div>
 
-      {/* Left part */}
-      <div className="relative z-10 w-full md:w-[40%] mt-24 flex flex-col gap-8 bg-black/20 backdrop-blur-md rounded-2xl p-8">
+      {/* Left part - Contact Info */}
+      <div className="relative z-10 w-full md:w-2/5 mt-24 flex flex-col gap-6 bg-black/30 backdrop-blur-md rounded-2xl p-6 md:p-8">
         
         {/* Call Us */}
         <div className="flex flex-col">
-          <div className="text-2xl md:text-3xl text-white font-bold flex items-center gap-4">
+          <div className="text-xl sm:text-2xl md:text-3xl text-white font-bold flex items-center gap-3 sm:gap-4">
             <FaPhoneAlt /> Call Us
           </div>
-          <div className="mt-2 text-white text-sm md:text-base">+9476 2345 234 | 011 233 3434</div>
+          <div className="mt-1 sm:mt-2 text-white text-sm sm:text-base">
+            +9476 2345 234 | 011 233 3434
+          </div>
         </div>
 
         {/* Email */}
         <div className="flex flex-col">
-          <div className="text-2xl md:text-3xl text-white font-bold flex items-center gap-4">
+          <div className="text-xl sm:text-2xl md:text-3xl text-white font-bold flex items-center gap-3 sm:gap-4">
             <FaEnvelope /> Email
           </div>
-          <div className="mt-2 text-white text-sm md:text-base">beautycosmetics99@gmail.com</div>
+          <div className="mt-1 sm:mt-2 text-white text-sm sm:text-base">
+            beautycosmetics99@gmail.com
+          </div>
         </div>
 
         {/* Location */}
         <div className="flex flex-col">
-          <div className="text-2xl md:text-3xl text-white font-bold flex items-center gap-4">
+          <div className="text-xl sm:text-2xl md:text-3xl text-white font-bold flex items-center gap-3 sm:gap-4">
             <FaMapMarkerAlt /> Location
           </div>
-          <div className="mt-2 text-white text-sm md:text-base">No: 8/2A, Pepiliyana Mawatha, Nugegoda</div>
+          <div className="mt-1 sm:mt-2 text-white text-sm sm:text-base">
+            No: 8/2A, Pepiliyana Mawatha, Nugegoda
+          </div>
         </div>
       </div>
 
       {/* Right part - Contact Form */}
-      <div className="relative z-10 w-full md:w-[45%] bg-[#f5f1ee] rounded-2xl flex flex-col items-center p-8 gap-6 shadow-xl">
-        <div className="text-secondary font-bold text-3xl md:text-4xl">Contact Us</div>
+      <div className="relative z-10 w-full md:w-2/5 bg-[#f5f1ee] rounded-2xl flex flex-col items-center p-6 md:p-8 gap-4 sm:gap-6 shadow-xl">
+        <div className="text-secondary font-bold text-2xl sm:text-3xl md:text-4xl text-center">
+          Contact Us
+        </div>
 
         {/* Input fields */}
         <input
           type="text"
           placeholder="Enter your name"
-          className="w-full md:w-[450px] h-[55px] px-5 rounded-xl border border-gray-300 focus:border-accent focus:ring-2 focus:ring-accent outline-none transition-all duration-300"
+          className="w-full max-w-lg h-12 sm:h-14 px-4 sm:px-5 rounded-xl border border-gray-300 focus:border-accent focus:ring-2 focus:ring-accent outline-none transition-all duration-300"
         />
 
         <input
           type="email"
           placeholder="Enter your email"
-          className="w-full md:w-[450px] h-[55px] px-5 rounded-xl border border-gray-300 focus:border-accent focus:ring-2 focus:ring-accent outline-none transition-all duration-300"
+          className="w-full max-w-lg h-12 sm:h-14 px-4 sm:px-5 rounded-xl border border-gray-300 focus:border-accent focus:ring-2 focus:ring-accent outline-none transition-all duration-300"
         />
 
         <textarea
           placeholder="Enter your message"
           rows={5}
-          className="w-full md:w-[450px] px-5 py-3 rounded-xl border border-gray-300 focus:border-accent focus:ring-2 focus:ring-accent outline-none transition-all duration-300 resize-none"
+          className="w-full max-w-lg px-4 sm:px-5 py-3 rounded-xl border border-gray-300 focus:border-accent focus:ring-2 focus:ring-accent outline-none transition-all duration-300 resize-none"
         />
 
         {/* Submit button */}
-        <button className="w-full md:w-[450px] h-[60px] bg-accent text-white rounded-xl text-lg font-semibold mt-2 hover:bg-white hover:text-accent border border-accent transition-all duration-300 cursor-pointer">
+        <button className="w-full max-w-lg h-12 sm:h-14 bg-accent text-white rounded-xl text-lg font-semibold hover:bg-white hover:text-accent border border-accent transition-all duration-300 cursor-pointer">
           Submit
         </button>
       </div>
