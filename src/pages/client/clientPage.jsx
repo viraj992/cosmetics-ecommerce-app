@@ -14,10 +14,10 @@ import Footer from "../../components/Home/Footer";
 
 export default function ClientwebPage(){
     return(
-        <div className="w-full h-screen max-h-screen ">
+        <div className="w-full h-screen min-h-screen flex flex-col ">
             <Header/>
 
-            <div className="w-full pt-[100px]">
+            <div className="w-full pt-[100px] flex-1">
                 <Routes path="/">
                     <Route path="/" element={<HomePage/>}/>
                     <Route path="/products" element={<ProductPage/>}/>
